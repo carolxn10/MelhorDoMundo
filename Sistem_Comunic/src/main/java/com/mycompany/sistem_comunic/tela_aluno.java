@@ -38,6 +38,12 @@ public class tela_aluno extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        aviso_coord = new javax.swing.JButton();
+        aviso_prof = new javax.swing.JButton();
+        espaco_aluno = new javax.swing.JButton();
+        calend_acadm = new javax.swing.JButton();
+        acessibilidade = new javax.swing.JButton();
+        voltar = new javax.swing.JButton();
 
         jLabel3.setText("jLabel3");
 
@@ -133,19 +139,77 @@ public class tela_aluno extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Categoria");
 
+        aviso_coord.setBackground(new java.awt.Color(0, 204, 0));
+        aviso_coord.setForeground(new java.awt.Color(255, 255, 255));
+        aviso_coord.setText("Aviso Coodenação");
+        aviso_coord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aviso_coordActionPerformed(evt);
+            }
+        });
+
+        aviso_prof.setBackground(new java.awt.Color(0, 204, 0));
+        aviso_prof.setForeground(new java.awt.Color(255, 255, 255));
+        aviso_prof.setText("Aviso Professor");
+        aviso_prof.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aviso_profActionPerformed(evt);
+            }
+        });
+
+        espaco_aluno.setBackground(new java.awt.Color(0, 204, 0));
+        espaco_aluno.setForeground(new java.awt.Color(255, 255, 255));
+        espaco_aluno.setText("Espaço Alunos");
+        espaco_aluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                espaco_alunoActionPerformed(evt);
+            }
+        });
+
+        calend_acadm.setBackground(new java.awt.Color(0, 204, 0));
+        calend_acadm.setForeground(new java.awt.Color(255, 255, 255));
+        calend_acadm.setText("Calendario Academico");
+
+        acessibilidade.setBackground(new java.awt.Color(0, 204, 0));
+        acessibilidade.setForeground(new java.awt.Color(255, 255, 255));
+        acessibilidade.setText("Acessibilidade");
+
+        voltar.setBackground(new java.awt.Color(0, 204, 0));
+        voltar.setForeground(new java.awt.Color(255, 255, 255));
+        voltar.setText("Voltar");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addContainerGap()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(calend_acadm)
+                        .addGap(57, 57, 57)
+                        .addComponent(acessibilidade)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(aviso_coord)
+                .addGap(50, 50, 50)
+                .addComponent(aviso_prof)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(espaco_aluno)
+                .addGap(37, 37, 37))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(voltar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +220,17 @@ public class tela_aluno extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(aviso_prof)
+                    .addComponent(espaco_aluno)
+                    .addComponent(aviso_coord))
+                .addGap(51, 51, 51)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(calend_acadm)
+                    .addComponent(acessibilidade))
+                .addGap(19, 19, 19)
+                .addComponent(voltar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -181,6 +255,20 @@ public class tela_aluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void espaco_alunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_espaco_alunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_espaco_alunoActionPerformed
+
+    private void aviso_coordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aviso_coordActionPerformed
+        aviso_coordenacao objcoord = new aviso_coordenacao();
+        objcoord.setVisible(true);
+    }//GEN-LAST:event_aviso_coordActionPerformed
+
+    private void aviso_profActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aviso_profActionPerformed
+        aviso_professor objprof = new aviso_professor();
+        objprof.setVisible(true);
+    }//GEN-LAST:event_aviso_profActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,6 +306,11 @@ public class tela_aluno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton acessibilidade;
+    private javax.swing.JButton aviso_coord;
+    private javax.swing.JButton aviso_prof;
+    private javax.swing.JButton calend_acadm;
+    private javax.swing.JButton espaco_aluno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -230,5 +323,6 @@ public class tela_aluno extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
 }
