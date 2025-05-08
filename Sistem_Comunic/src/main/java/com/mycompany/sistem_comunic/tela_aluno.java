@@ -111,17 +111,22 @@ public class tela_aluno extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel7)))
-                .addGap(14, 14, 14))
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 396, Short.MAX_VALUE)
+                        .addComponent(jLabel7)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel6)
+                        .addGap(17, 17, 17))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,10 +135,14 @@ public class tela_aluno extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel7)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(0, 6, Short.MAX_VALUE)
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -169,6 +178,11 @@ public class tela_aluno extends javax.swing.JFrame {
         calend_acadm.setBackground(new java.awt.Color(0, 204, 0));
         calend_acadm.setForeground(new java.awt.Color(255, 255, 255));
         calend_acadm.setText("Calendario Academico");
+        calend_acadm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calend_acadmActionPerformed(evt);
+            }
+        });
 
         acessibilidade.setBackground(new java.awt.Color(0, 204, 0));
         acessibilidade.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,6 +191,11 @@ public class tela_aluno extends javax.swing.JFrame {
         voltar.setBackground(new java.awt.Color(0, 204, 0));
         voltar.setForeground(new java.awt.Color(255, 255, 255));
         voltar.setText("Voltar");
+        voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -220,7 +239,7 @@ public class tela_aluno extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aviso_prof)
                     .addComponent(espaco_aluno)
@@ -257,7 +276,8 @@ public class tela_aluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void espaco_alunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_espaco_alunoActionPerformed
-        // TODO add your handling code here:
+        espaco_aluno objesp = new espaco_aluno();
+        objesp.setVisible(true);
     }//GEN-LAST:event_espaco_alunoActionPerformed
 
     private void aviso_coordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aviso_coordActionPerformed
@@ -269,6 +289,16 @@ public class tela_aluno extends javax.swing.JFrame {
         aviso_professor objprof = new aviso_professor();
         objprof.setVisible(true);
     }//GEN-LAST:event_aviso_profActionPerformed
+
+    private void calend_acadmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calend_acadmActionPerformed
+        calendario_acadm objcad = new calendario_acadm();
+        objcad.setVisible(true);
+    }//GEN-LAST:event_calend_acadmActionPerformed
+
+    private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
+        tela_inicial objaluno = new tela_inicial();
+        objaluno.setVisible(true);
+    }//GEN-LAST:event_voltarActionPerformed
 
     /**
      * @param args the command line arguments
