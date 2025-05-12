@@ -29,6 +29,7 @@ public class espaco_aluno extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        voltar_aluno = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jCheckBox1 = new javax.swing.JCheckBox();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -51,12 +52,21 @@ public class espaco_aluno extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Mensagens e Bate-Papo");
 
+        voltar_aluno.setText("Voltar");
+        voltar_aluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltar_alunoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(144, 144, 144)
+                .addContainerGap()
+                .addComponent(voltar_aluno)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -66,6 +76,10 @@ public class espaco_aluno extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(voltar_aluno)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSeparator1.setForeground(new java.awt.Color(0, 153, 0));
@@ -200,6 +214,11 @@ public class espaco_aluno extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void voltar_alunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar_alunoActionPerformed
+        tela_aluno objaluno = new tela_aluno();
+        objaluno.setVisible(true);
+    }//GEN-LAST:event_voltar_alunoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -252,5 +271,6 @@ public class espaco_aluno extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton voltar_aluno;
     // End of variables declaration//GEN-END:variables
 }
